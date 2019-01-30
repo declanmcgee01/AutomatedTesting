@@ -1,0 +1,7 @@
+
+
+public class DemoSiteLandingPage {
+	
+	@FindBy(id = "sb_form_q")
+	private WebElement userBox;
+}

@@ -1,0 +1,59 @@
+
+public class Blackjack {
+
+	public int play(int i, int j) {
+		int result = 0;
+		
+		switch(result) {
+			case 1: if((i<2 || i>31) || (j<2 || j>31)) {
+				result = -1;
+				break;
+			}
+			case 2: if(i > 21 && j > 21) {
+				result =  0;
+				break;
+			}
+			case 3: if(j>21) {
+				result = i;
+				break;
+			}
+			case 4: if(i>21) {
+				result = j;
+				break;
+			}
+			case 5: if((i<22 && j<22)) {
+				if(i > j) {
+					result =  i;
+					break;
+				}else if(i<j) {
+					result =  j;
+					break;
+				}
+			}
+		
+		}
+		
+		
+		
+		/*if((i<2 || i>31) || (j<2 || j>31)) {
+			return -1;
+		}
+		if(i > 21 && j > 21) {
+			return 0;
+		}else if(j >21) {
+			return i;
+		}else if(i >21) {
+			return j;
+		}
+		if((i<22 && j<22)) {
+			if(i > j) {
+				return i;
+			}else if(i<j) {
+				return j;
+			}
+		}*/
+		
+		return result;
+	}
+
+}

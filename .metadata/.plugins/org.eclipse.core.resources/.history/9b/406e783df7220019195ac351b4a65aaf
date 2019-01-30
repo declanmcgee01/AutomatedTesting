@@ -1,0 +1,26 @@
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+
+public class test {
+	Blackjack blackjack;
+	
+	@Before
+	public void setUp() {
+		blackjack = new Blackjack();
+	}
+	
+	@Test
+	public void test1() {
+		
+		assertEquals(10, blackjack.play(10,22));
+		assertEquals(10, blackjack.play(22,9));
+		assertEquals(10, blackjack.play(22,22));
+		assertEquals(10, blackjack.play(10,7));
+		assertEquals(10, blackjack.play(1,19));
+
+	}
+
+}

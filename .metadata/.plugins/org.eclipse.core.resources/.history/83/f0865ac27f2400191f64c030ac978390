@@ -1,0 +1,13 @@
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class ShoppingSiteLandingPage {
+	
+	@FindBy(xpath = "http://automationpractice.com/index.php")
+	private WebElement searchBar;
+	
+	public void searchEntry(String searchText) {
+		searchBar.sendKeys(searchText);
+	}
+
+}

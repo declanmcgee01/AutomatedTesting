@@ -1,0 +1,30 @@
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class testInvalidEntries {
+	
+Blackjack blackjack;
+	
+	@Before
+	public void setUp() {
+		blackjack = new Blackjack();
+	}
+	
+	@Test
+	public void test6() {
+		assertEquals("Error: Invalid entries, input must be between 2 and 31", -1, blackjack.play(1, 1));
+	}
+	
+	@Test
+	public void test7() {
+		assertEquals("Error: Invalid entries, input must be between 2 and 31", -1, blackjack.play(1, 10));
+	}
+	
+	@Test
+	public void test8() {
+		assertEquals("Error: Invalid entries, input must be between 2 and 31", -1, blackjack.play(10, 1));
+	}
+
+}

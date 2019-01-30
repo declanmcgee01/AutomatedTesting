@@ -1,0 +1,61 @@
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Ignore;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.PageFactory;
+
+public class SeleniumDemonstration {
+	
+	WebDriver driver;
+	
+	@Before
+	public void setUp() {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Admin\\Desktop\\chromedriver.exe");
+		driver = new ChromeDriver();	
+	}
+	
+	@After
+	public void tearDown() {
+		driver.quit();	
+	}
+	
+	@Test
+	@Ignore
+	public void bingSearch() throws InterruptedException {
+		driver.manage().window().maximize();
+		driver.get(Constants.URL1);
+		BingLandingPage bingLandingPage = PageFactory.initElements(driver, BingLandingPage.class);
+		bingLandingPage.searchBing("selenium");
+		Thread.sleep(3000);
+	}
+	
+	@Test
+	@Ignore
+	public void norseSearch() throws InterruptedException {
+		driver.manage().window().maximize();
+		driver.get(Constants.URL2);
+		NorseGodsLandingPage godsLandingPage = PageFactory.initElements(driver, NorseGodsLandingPage.class);
+		godsLandingPage.searchGods("1");
+		driver.findElement(By.xpath("//*[@id=\"search-God-Button\"]")).click();
+		Thread.sleep(3000);
+	}
+	
+	@Test
+	public void  paintTool() throws InterruptedException {
+		driver.manage().window().maximize();
+		driver.get(Constants.URL3);
+		Actions action = new Actions(driver);
+		WebElement painter = driver.findElement(By.id("painter"));
+		action.moveToElement(painter).dragAndDropBy(painter, 0, -200).perform();
+		Thread.sleep(3000);
+		
+	}
+
+}

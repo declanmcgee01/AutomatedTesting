@@ -1,0 +1,17 @@
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class DemoSiteLandingPage {
+	
+	@FindBy(id = "sb_form_q")
+	private WebElement userBox;
+	private WebElement passwordBox;
+	
+	public void userEntry(String userName) {
+		userBox.sendKeys(userName);
+	}
+	
+	public void passwordEntry(String password) {
+		passwordBox.sendKeys(password);
+	}
+}

@@ -1,0 +1,11 @@
+
+public class Blackjack {
+
+	public int play(int i, int j) {
+		if((i<2 || i>31) || (j<2 || j>31)) {
+			return -1;
+		}
+		return 0;
+	}
+
+}

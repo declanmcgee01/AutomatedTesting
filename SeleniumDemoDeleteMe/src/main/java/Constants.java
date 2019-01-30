@@ -1,0 +1,9 @@
+
+public class Constants {
+
+	public static final String URL1 = "https://www.bing.com";
+	public static  final String URL2 = "http://localhost:3000/search";
+	public static  final String URL3 = "https://www.youidraw.com/apps/painter/";
+	public static  final String URL4 = "https://christophperrins.github.io/TestingSite/";
+	
+}

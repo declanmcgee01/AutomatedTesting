@@ -1,0 +1,7 @@
+
+public class Constants {
+
+	public static final String URL1 = "https://www.bing.com";
+	public static  final String URL2 = "http://localhost:3000/search";
+	
+}
