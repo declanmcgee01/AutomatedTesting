@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.openqa.selenium.support.PageFactory;
 
 public class DemoSiteTest {
@@ -15,8 +16,8 @@ public class DemoSiteTest {
 	
 	@Before
 	public void setUp() {
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Admin\\Desktop\\chromedriver.exe");
-		driver = new ChromeDriver();
+		System.setProperty("phantomjs.binary.path", "src\\main\\resources\\phantomjs.exe");
+		driver = new PhantomJSDriver();
 	}
 	
 	@After
@@ -41,6 +42,7 @@ public class DemoSiteTest {
 		Thread.sleep(5000);
 		WebElement success = driver.findElement(By.xpath("/html/body/table/tbody/tr/td[1]/big/blockquote/blockquote/font/center/b"));
 		assertEquals("Error: Unsuccessful Login", "**Successful Login**", success.getText());
+		System.out.println(success.getText());
 	}
 
 }

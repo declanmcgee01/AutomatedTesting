@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="DemoSiteTest" project="Demo-Site" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="DemoSiteTest" time="7.722">
-    <testcase name="addUserTest" classname="DemoSiteTest" time="7.722"/>
-  </testsuite>
-</testrun>
